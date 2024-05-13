@@ -27,7 +27,7 @@ export function Home() {
         <main className={styles.content}>
           <div className={styles.message}>
             <h1 className={styles.title}>
-              Olá Visitante, bem vindo!
+              Olá Visitante, bem vindo!😉
             </h1>
 
             <span>Email: ....</span>
