@@ -32,10 +32,12 @@ export function Home() {
         <main className={styles.content}>
           <div className={styles.message}>
             <h1 className={styles.title}>
-              Olá Visitante, bem vindo!
+              Olá {user ? user.name : "Visitante"}, bem vindo!
             </h1>
 
-            <span>Email: ....</span>
+            { user && (
+              <span>Email: {user.email}</span>
+            )}
 
 
             <strong className={styles.addressLabel}>Endereço atual:</strong>
