@@ -4,7 +4,7 @@ import { Header } from '../../components/header'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { deleteAddress, fetchUsers } from '../../redux/user/slice';
+import { deleteAddress, fetchUsers, fetchUserById } from '../../redux/user/slice';
 
 export function Home() {
   const dispatch = useDispatch();
@@ -20,6 +20,12 @@ export function Home() {
 
   function handleFetchUsers() {
     dispatch(fetchUsers())
+  }
+
+  function handleFetchUserById(){
+    const userId = 5;
+
+    dispatch(fetchUserById(userId))
   }
 
 
@@ -66,6 +72,7 @@ export function Home() {
             <br />
             <h2>Lista de usuários</h2>
             <button onClick={handleFetchUsers} >Buscar Usuários</button>
+            <button onClick={handleFetchUserById} >Buscar Usuário com id</button>
             <br />
 
             {/**se loando estiver true exibir mensagem */}
